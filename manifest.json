@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Instagram Element Hider",
+  "description": "Hides elements on Instagram",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.instagram.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
